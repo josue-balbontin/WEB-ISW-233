@@ -1,6 +1,10 @@
+import Storage from "./Storage.js";
+
+const CART_KEY = "cart";
+
 const Store = {
   menu: null,
-  cart: [],
+  cart: Storage.get(CART_KEY) || [],
 };
 
 const proxiedStore = new Proxy(Store, {
@@ -10,6 +14,7 @@ const proxiedStore = new Proxy(Store, {
       window.dispatchEvent(new Event("appmenuchange"));
     }
     if (property == "cart") {
+      Storage.set(CART_KEY, value);
       window.dispatchEvent(new Event("appcartchange"));
     }
     return true;

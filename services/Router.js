@@ -26,12 +26,10 @@ const Router = {
         pageElement = document.createElement("menu-page");
         break;
       case "/restaurants":
-        pageElement = document.createElement("h1");
-        pageElement.textContent = "Restaurants Page";
+        pageElement = document.createElement("restaurants-page");
         break;
       case "/order":
-        pageElement = document.createElement("h1");
-        pageElement.textContent = "Order Page";
+        pageElement = document.createElement("carrito-page");
         break;
       default:
         if (route.startsWith("/products/")) {

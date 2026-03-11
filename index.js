@@ -5,6 +5,8 @@ import { loadData } from "./services/Menu.js";
 
 import { MenuPage } from "./blocks/menuPage/menuPage.js";
 import ProductItem from "./blocks/productItem/productItem.js";
+import "./blocks/carrito/carrito.js";
+import "./blocks/restaurants/restaurants.js";
 
 globalThis.app = {};
 
